@@ -1,5 +1,7 @@
 ﻿{
-	"windowMinHeight": 800,
+	"windowMaxWidth": 900,
+	"windowMinHeight": 350,
+	"windowMaxHeight": 750,
 	"rightMargin": 15,
 	"bottomMargin": 20,
 	"markerHeader": 99,
