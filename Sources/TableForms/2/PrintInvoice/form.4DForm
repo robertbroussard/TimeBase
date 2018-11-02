@@ -1,0 +1,417 @@
+﻿{
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 738,
+	"markerBreak": 758,
+	"markerFooter": 778,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"top": 19,
+					"left": 20,
+					"width": 139,
+					"height": 43,
+					"fontFamily": "Lucida Grande",
+					"fontSize": 36,
+					"text": "Invoice"
+				},
+				"Invoice ID": {
+					"type": "input",
+					"top": 32,
+					"left": 426,
+					"width": 105,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Invoice ID:1",
+					"fill": "transparent",
+					"styleSheet": "Default",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Invoice Date": {
+					"type": "input",
+					"top": 69,
+					"left": 123,
+					"width": 145,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Invoice Date:3",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Company Name": {
+					"type": "input",
+					"top": 120,
+					"left": 280,
+					"width": 251,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]Company Name:2",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Address1": {
+					"type": "input",
+					"top": 142,
+					"left": 280,
+					"width": 251,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]Address1:3",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Address2": {
+					"type": "input",
+					"top": 164,
+					"left": 280,
+					"width": 251,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]Address2:4",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Zip Code": {
+					"type": "input",
+					"top": 186,
+					"left": 280,
+					"width": 43,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]Zip Code:5",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"City": {
+					"type": "input",
+					"top": 186,
+					"left": 331,
+					"width": 200,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]City:6",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contact": {
+					"type": "input",
+					"top": 209,
+					"left": 280,
+					"width": 251,
+					"height": 16,
+					"dataSource": "[_Client_Old:1]Contact:7",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Subtotal": {
+					"type": "input",
+					"top": 480,
+					"left": 357,
+					"width": 143,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Subtotal:4",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Tax": {
+					"type": "input",
+					"top": 505,
+					"left": 357,
+					"width": 143,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Tax:5",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Total": {
+					"type": "input",
+					"top": 529,
+					"left": 357,
+					"width": 143,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Total:6",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Payment Method": {
+					"type": "input",
+					"top": 619,
+					"left": 27,
+					"width": 203,
+					"height": 16,
+					"dataSource": "[_Invoice_Old:2]Payment Method:9",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Payment Reference": {
+					"type": "input",
+					"top": 619,
+					"left": 280,
+					"width": 243,
+					"height": 56,
+					"dataSource": "[_Invoice_Old:2]Payment Reference:10",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"textFormat": "### ### ##0,00 €",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 260,
+					"left": 4,
+					"width": 536,
+					"height": 160,
+					"dataSourceTypeHint": "text",
+					"table": -3,
+					"listForm": "Print_Included",
+					"scrollbarHorizontal": "visible",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "solid"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 32,
+					"left": 343,
+					"width": 81,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?1>"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 69,
+					"left": 20,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?3>: "
+				},
+				"Text9": {
+					"type": "text",
+					"top": 120,
+					"left": 167,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "Client: "
+				},
+				"Text1": {
+					"type": "text",
+					"top": 209,
+					"left": 167,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "ATTN:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 480,
+					"left": 259,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?4>: "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 505,
+					"left": 259,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?5>: "
+				},
+				"Text4": {
+					"type": "text",
+					"top": 530,
+					"left": 259,
+					"width": 101,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?6>: "
+				},
+				"Text5": {
+					"type": "text",
+					"top": 593,
+					"left": 27,
+					"width": 141,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?9>:"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 593,
+					"left": 280,
+					"width": 141,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?10>: "
+				}
+			}
+		}
+	]
+}

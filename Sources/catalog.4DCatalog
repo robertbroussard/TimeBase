@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="TimeBase" uuid="3DCEF6FF8C004350BAD4A00231475032" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="_Client_Old" uuid="05E36BA52C9741ED8DC0F289B9D2A027" id="1" leave_tag_on_delete="true">
+		<field name="Client ID" uuid="04036ADF9896453E9AE72A18F58A0A7C" type="10" limiting_length="10" unique="true" never_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="0" green="124" blue="255" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Company Name" uuid="86D166C8E9554B3F9D9E34F664B7F889" type="10" limiting_length="40" never_null="true" id="2"/>
+		<field name="Address1" uuid="3771B665034A433EB6176D7B3F3A83E0" type="10" limiting_length="40" never_null="true" id="3"/>
+		<field name="Address2" uuid="52714B75C4A14FFBB08B4F9C0C3239D9" type="10" limiting_length="40" never_null="true" id="4"/>
+		<field name="Zip Code" uuid="A2F16FF980504DB88FD81F515123872A" type="10" limiting_length="10" never_null="true" id="5"/>
+		<field name="City" uuid="51EDDBF8AD1346FD9E212A3501B0AC6E" type="10" limiting_length="20" never_null="true" id="6"/>
+		<field name="Contact" uuid="393CE638EAC444E4AC8047C30284F85D" type="10" limiting_length="40" never_null="true" id="7"/>
+		<field name="Email" uuid="310B3B164D54476F90C7E309178722DB" type="10" limiting_length="50" never_null="true" id="8"/>
+		<field name="Web Site" uuid="63BD2D0EF66C4E748E5299CFF27FF017" type="10" limiting_length="50" never_null="true" id="9"/>
+		<field name="Telephone" uuid="03B6591C57EE4DD089D0976BFE24B80E" type="10" limiting_length="20" never_null="true" id="10"/>
+		<field name="Fax" uuid="6091A57283824B9D8EC71B0937967839" type="10" limiting_length="20" never_null="true" id="11"/>
+		<field name="Comments" uuid="8842F08888454D74B1CA07B41B486D50" type="10" never_null="true" id="12"/>
+		<field name="Total Sales" uuid="C02F2D0410914AE9AC8D13E1B7A9D997" type="6" never_null="true" id="13"/>
+		<primary_key field_name="Client ID" field_uuid="04036ADF9896453E9AE72A18F58A0A7C"/>
+		<table_extra visible="false">
+			<editor_table_info displayable_fields_count="13">
+				<color red="223" green="228" blue="255" alpha="255"/>
+				<coordinates left="74" top="1116" width="152" height="320"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="_Invoice_Old" uuid="3F178694C43044E3A9857B634C626FF9" id="2" leave_tag_on_delete="true">
+		<field name="Invoice ID" uuid="B7F99556EE3045139C6F05098907C848" type="10" limiting_length="10" unique="true" never_null="true" id="1">
+			<field_extra modifiable="false">
+				<editor_field_info>
+					<color red="255" green="84" blue="0" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Client ID" uuid="57C001269F844C1784140BA910BC672C" type="10" limiting_length="10" never_null="true" id="2">
+			<field_extra>
+				<editor_field_info>
+					<color red="0" green="124" blue="255" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Invoice Date" uuid="22B37648F9BD439489207B9BC838C648" type="8" never_null="true" id="3"/>
+		<field name="Subtotal" uuid="1DF4FC280E724ED3A539C1393FEE3A1A" type="6" never_null="true" id="4"/>
+		<field name="Tax" uuid="F3E6C71E483346E295356DA8D325E906" type="6" never_null="true" id="5"/>
+		<field name="Total" uuid="625F193AFF654CD2825E984FE71F1957" type="6" never_null="true" id="6"/>
+		<field name="Paid" uuid="7A7D358B0F824537BC05DA14D16A9F88" type="1" never_null="true" id="7"/>
+		<field name="Payment Date" uuid="4664C5574365418DBCBEC70A92F7B477" type="8" never_null="true" id="8"/>
+		<field name="Payment Method" uuid="F5282266C3274C8A89F028150B4C56C8" type="10" limiting_length="20" never_null="true" id="9"/>
+		<field name="Payment Reference" uuid="EF6FEA24A12D483E9EA3B75F0C81DE25" type="10" never_null="true" id="10"/>
+		<primary_key field_name="Invoice ID" field_uuid="B7F99556EE3045139C6F05098907C848"/>
+		<table_extra visible="false">
+			<editor_table_info displayable_fields_count="10">
+				<color red="223" green="228" blue="255" alpha="255"/>
+				<coordinates left="463" top="1171" width="166" height="266"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="_Line Items_Old" uuid="DA7D8E8B016A431394F76E4CF462E878" id="3" leave_tag_on_delete="true">
+		<field name="Invoice ID" uuid="58BC7D4EE36C482CAE964D91B30CD7E9" type="10" limiting_length="10" never_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="84" blue="0" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Product ID" uuid="040018DB3A754FB0A0EBB8E4013D989D" type="10" limiting_length="20" never_null="true" id="2">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="199" blue="4" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Quantity" uuid="6242C8B97E2049A1BB26B7BF179EDAE4" type="6" never_null="true" id="3"/>
+		<field name="Total" uuid="922AE2F5F9EA4C84956F53E330C82D1D" type="6" never_null="true" id="4"/>
+		<field name="Tax Rate" uuid="A22C1A1138CF482D99CDE1AF36ED0669" type="6" never_null="true" id="5"/>
+		<field name="Discount Rate" uuid="936CC646B31D400C86C0840E053CB7C2" type="6" never_null="true" id="6"/>
+		<field name="PK_ID" uuid="98DBE6C220EB4054A771B5DF6BD96948" type="4" unique="true" autosequence="true" id="7"/>
+		<primary_key field_name="PK_ID" field_uuid="98DBE6C220EB4054A771B5DF6BD96948"/>
+		<table_extra visible="false">
+			<editor_table_info displayable_fields_count="8">
+				<color red="223" green="228" blue="255" alpha="255"/>
+				<coordinates left="724.33984375" top="1195.70703125" width="139" height="229.08984375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="_Product_Old" uuid="FC494E8417BA4BE98E35C63EDE9D87E0" id="4" leave_tag_on_delete="true">
+		<field name="Product ID" uuid="A88661587C0449CBB05C9FFCE346A0F4" type="10" limiting_length="10" unique="true" never_null="true" id="1">
+			<field_extra modifiable="false" visible="false">
+				<editor_field_info>
+					<color red="255" green="199" blue="4" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Name" uuid="3DE29A273F1D4BC6A808D92AEBF49627" type="10" limiting_length="20" never_null="true" id="2">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Unit Price" uuid="40CB5771901A419BB5B33558C8F3C86D" type="6" never_null="true" id="3"/>
+		<field name="Tax Rate" uuid="FBE876ABF3504AFCA7671E4A0B00DDFA" type="6" never_null="true" id="4"/>
+		<field name="AAA_test_Field5" uuid="F804027BC6F5490BA3193BFC9C633C90" type="10" limiting_length="255" never_null="true" id="5"/>
+		<primary_key field_name="Product ID" field_uuid="A88661587C0449CBB05C9FFCE346A0F4"/>
+		<table_extra visible="false">
+			<editor_table_info displayable_fields_count="4">
+				<color red="223" green="228" blue="255" alpha="255"/>
+				<coordinates left="929" top="1130" width="126" height="140"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="_Client_TBD" uuid="157E0B68FD1F45C09A491B3F1B64C5AB" id="5">
+		<field name="Nickname" uuid="6CC2BFCD4B7C4B3B81A391DB9BDBA139" type="10" limiting_length="80" id="1"/>
+		<field name="Full Name" uuid="A56D0A363CE441FDAC755381A419EAEE" type="10" limiting_length="80" id="2"/>
+		<field name="Address1" uuid="3BEBACF780A9491FA164945136445A2C" type="10" limiting_length="80" id="3"/>
+		<field name="Address2" uuid="352C77828DA74CCF877DF806E0A87D2E" type="10" limiting_length="80" id="4"/>
+		<field name="Address3" uuid="25A6288CA6D74A3E97401CA73F54915A" type="10" limiting_length="80" id="5"/>
+		<field name="Address4" uuid="337FF1F7F5B84504A88AA2C127FF0C71" type="10" limiting_length="80" id="6"/>
+		<field name="Phone 1" uuid="1331F3C2E4B14F56ACF8B0B04675304E" type="10" limiting_length="80" id="7"/>
+		<field name="Phone 2" uuid="8518225257DE4B26BC6045C1AA8622BE" type="10" limiting_length="80" id="8"/>
+		<field name="Atty-in-Charge" uuid="218DCBCCB468470FA1B0649B3B7D0992" type="10" limiting_length="80" id="9"/>
+		<field name="Reference" uuid="7C4595D0B7DD4C78872F2D2291356B18" type="10" limiting_length="80" id="10"/>
+		<field name="Rate 1" uuid="BD064B5F293F4DC290CD89B378353B55" type="6" id="11"/>
+		<field name="Flat Fee Amnt (T&amp;E)" uuid="BFA6AC5509D54E22B72637014122C12F" type="10" limiting_length="80" id="12"/>
+		<field name="Service Tax Rate" uuid="F4308DA323D84F78B41D6D07D3970374" type="6" id="13"/>
+		<field name="Sales Tax Rate" uuid="22929659A42949B386FC77C9234406D2" type="6" id="14"/>
+		<field name="Hold Type" uuid="36435CC5D5894CBF843B12534E15C33C" type="10" limiting_length="80" id="15"/>
+		<field name="Interest Rate" uuid="767526067AEF45ABA8C8FAE063BE2C23" type="6" id="16"/>
+		<field name="Markup %" uuid="6FD67BA309CB4DDEB6F38E7D59395E25" type="6" id="17"/>
+		<field name="Round To" uuid="A1A4AF92D256421096DBA8C87DFC221F" type="6" id="18"/>
+		<field name="Round Type" uuid="74587C49C07E46C59E4EB5437D5FDE4A" type="10" limiting_length="80" id="19"/>
+		<field name="Balance Total" uuid="2028DB7D158C48B090A0507E50B89817" type="6" id="20"/>
+		<field name="Funds Minimum" uuid="4008DCD33827409AB32247E999083131" type="6" id="21"/>
+		<field name="Previous Bill Date" uuid="60822CC271C84255B39079EC997578A6" type="8" id="22"/>
+		<field name="Billable Hours" uuid="4486830E909E42499C0D6BBB9249D89F" type="6" id="23"/>
+		<field name="PK_ID" uuid="5AED55BCEB8B4F07AC73F65C6DFB1A5A" type="4" unique="true" autosequence="true" id="24"/>
+		<primary_key field_name="PK_ID" field_uuid="5AED55BCEB8B4F07AC73F65C6DFB1A5A"/>
+		<table_extra visible="false">
+			<editor_table_info fields_ordering="1" displayable_fields_count="24">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="1269" top="809" width="336" height="561.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="_Slip_TBD" uuid="8261D8BE32914225B1E4D66EED8BA5EB" id="6">
+		<field name="Attorney" uuid="CB7CC8EB25154F1393C9051E37DDAA69" type="10" limiting_length="80" id="1"/>
+		<field name="Client" uuid="5710701120FC48B09189B8FF105D46B8" type="10" limiting_length="80" id="2"/>
+		<field name="Activity" uuid="245B5FB6ADF845FE8B48FA8118BB6D40" type="10" limiting_length="80" id="3">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_1" uuid="FAD030367D1C41C6AB15F2531F67C3C2" type="10" limiting_length="80" id="4">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_2" uuid="D2D51CBE53CB4D638BCDE49846D58D35" type="10" limiting_length="80" id="5">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_3" uuid="FE0828EF6297466EA7397E1BF217752B" type="10" limiting_length="80" id="6">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_4" uuid="32E3B82659824D2CAC536594C5235600" type="10" limiting_length="80" id="7">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Date" uuid="BDF8A9475B174EF98BE245BF42F6C700" type="8" id="8"/>
+		<field name="Time_used" uuid="DAD5E62FC68846FB979770B36C3DCAC4" type="9" id="9"/>
+		<field name="Rate" uuid="8C49E4632095492DA32C47770FB74416" type="6" id="10"/>
+		<field name="Billable_Amt" uuid="66C8E5C80A384782915C2C0573B33025" type="6" id="11"/>
+		<field name="Qty" uuid="257A969E005E4F2D99B4EA74C093422E" type="3" id="12"/>
+		<field name="Price" uuid="98ED18616C5642F18E98245DE5353F02" type="6" id="13"/>
+		<field name="Bill_Status" uuid="8461E12ACD1A4513A696F13A62E48258" type="10" limiting_length="80" id="14"/>
+		<field name="Slip_Num" uuid="D20F8A7F5B4440DD9B252D9508CB053E" type="6" id="15"/>
+		<field name="ID" uuid="922B73F36FFB46DC81C3B2FC3B61ED65" type="4" never_null="true" id="16"/>
+		<field name="Description" uuid="B2504869FDDA4C1198487E3A2BCDB84C" type="10" never_null="true" id="17"/>
+		<field name="PK_ID" uuid="4DA7A696D2134D1EAC63E8830B2A65E9" type="4" unique="true" autosequence="true" id="19"/>
+		<primary_key field_name="PK_ID" field_uuid="4DA7A696D2134D1EAC63E8830B2A65E9"/>
+		<table_extra visible="false">
+			<editor_table_info displayable_fields_count="19">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="1707" top="816" width="316" height="448.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Client" uuid="4E62998C6EC2487699854DBA7254C48C" id="7">
+		<field name="ID" uuid="A41E57D4EC074247974689EC301CC085" type="4" unique="true" id="1"/>
+		<field name="Slip_ID" uuid="E6A360D5E7B84373A5BCEE19D1C5AF31" type="4" id="2">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Nickname" uuid="BD57E222BD1C40299DBF5927978C6308" type="10" limiting_length="80" unique="true" id="3">
+			<field_extra modifiable="false"/>
+		</field>
+		<field name="Full_Name" uuid="4C3554002C944CFD8E560BB5F7583F6D" type="10" limiting_length="80" id="4"/>
+		<field name="Address1" uuid="3428DE9D5DEA422791B44101B0287EC3" type="10" limiting_length="80" id="5"/>
+		<field name="Address2" uuid="CF8AD7DD12284CE89955728083EC518D" type="10" limiting_length="80" id="6"/>
+		<field name="Address3" uuid="245BFD6FEA164DA8BF0D628EE6B684F9" type="10" limiting_length="80" id="7"/>
+		<field name="Address4" uuid="6B2C66CC5B854EC59AF3857B41928D79" type="10" limiting_length="80" id="8"/>
+		<field name="Phone_1" uuid="7636969432084EC6812596C917764DA9" type="10" limiting_length="80" id="9"/>
+		<field name="Phone_2" uuid="BE16E43D16C2479499AA05EDAB6F924A" type="10" limiting_length="80" id="10"/>
+		<field name="Atty-in-Charge" uuid="2CDD8E83B7BA42EC9224F86CF9B51213" type="10" limiting_length="80" id="11"/>
+		<field name="Reference" uuid="0BE4F38D71484FDFBA76365C7F74D0A8" type="10" limiting_length="80" id="12"/>
+		<field name="Rate_1" uuid="C70D0D8420FE49729045BF8271F265A0" type="6" id="13"/>
+		<field name="Flat_Fee_Amt" uuid="C0905D47A0784D1A9C15CA88A5ABDDDD" type="6" id="14"/>
+		<field name="Service_Tax_Rate" uuid="E4AD7E99CE9C4E75B77ACEB0BDD1AD28" type="6" id="15"/>
+		<field name="Sales_Tax_Rate" uuid="2E6D8ACCCA9643CFB6649B24BEFCC064" type="6" id="16"/>
+		<field name="Hold_Type" uuid="69AE32E7D6EA492FB8170C61F72ECDF3" type="10" limiting_length="80" id="17"/>
+		<field name="Interest_Rate" uuid="F38833D7CC414C0481D7C694697009B3" type="6" id="18"/>
+		<field name="Markup" uuid="7DA13DB3E82845DF9F863C6D653ACFF8" type="6" id="19"/>
+		<field name="Round_To" uuid="7341AC039D424F29B48F03BA60378171" type="6" id="20"/>
+		<field name="Round_Type" uuid="813387BC8D2D466ABED489BB0F4545C6" type="10" limiting_length="80" id="21"/>
+		<field name="Balance_Total" uuid="BE05725DFED74987A6C2AD4C288CF69A" type="6" id="22"/>
+		<field name="Funds_Minimum" uuid="C806A03DD1D549C5ADE53D005843A1DB" type="6" id="23"/>
+		<field name="Previous_Bill_Date" uuid="D53CBB1B857D441E8E4E18DDE6FC5574" type="8" id="24"/>
+		<field name="Billable_Hours" uuid="84AF8049509B400CBAAC6A402403A120" type="6" id="25"/>
+		<field name="Notes" uuid="06922B17B8184B7695EAF20878559B0C" type="10" limiting_length="255" never_null="true" id="26"/>
+		<primary_key field_name="ID" field_uuid="A41E57D4EC074247974689EC301CC085"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="27">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="0" top="0" width="216" height="617.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Slip" uuid="EDDDEF4D4B714B49B56DCDD49AC85EE4" id="8">
+		<field name="Slip_ID" uuid="FB97AB787CFA4B739CEE185B7B2BC22B" type="4" unique="true" id="1"/>
+		<field name="Date" uuid="BC16D16093AF40499590175B22AF6567" type="8" id="2"/>
+		<field name="Attorney_ID" uuid="6C7D4255672342DF8C33DE6351E25641" type="4" id="3">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Attorney" uuid="86D526A3C8984A0281736A24D380FA88" type="10" limiting_length="80" id="4"/>
+		<field name="Client_ID" uuid="F875DB1E8F6F45B2A52C59657447BA8B" type="4" id="5">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Client" uuid="772910A7FB114D20891283BC8594A670" type="10" limiting_length="80" id="6"/>
+		<field name="Description" uuid="5B9AB01BD6D14AE5A2C27BD8AE8DD5E5" type="10" id="7"/>
+		<field name="Time_used" uuid="D5146316F9F24865A7FE6135EAAED6F7" type="9" id="8"/>
+		<field name="Rate" uuid="D340807F66F64E7AB40E698A4D00361D" type="6" id="9"/>
+		<field name="Billable_Amt" uuid="8AE004F96FDB4AEF8E26AE8C97FAF6D9" type="6" id="10"/>
+		<field name="Qty" uuid="0D7FE5F7D6C84318AD1121B7350955BE" type="4" id="11"/>
+		<field name="Price" uuid="8E3484EAD5AA42F3AABD9C9029733FEE" type="6" id="12"/>
+		<field name="Bill_Status" uuid="AEB3BFB126F046DFB9A03E04F48AA8E9" type="10" limiting_length="80" id="13"/>
+		<field name="TS_Slip_Num" uuid="7304ADB21D5B4A08BEC76F1BCB742D81" type="4" id="14"/>
+		<field name="Activity" uuid="C6C4A1F544AA4505B1E3463A91C8FE51" type="10" limiting_length="80" id="15"/>
+		<field name="Desc_1" uuid="DB9D8E8ED3034122AE7E81BE22EC44B4" type="10" limiting_length="80" id="16">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_2" uuid="4BA525C82A3E4E5F957D7161F5EB6EF8" type="10" limiting_length="80" id="17">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_3" uuid="657FD3DD3B2146EBB12E45D92217B416" type="10" limiting_length="80" id="18">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Desc_4" uuid="FEBDA9C4446645198BC630A3189B3FA2" type="10" limiting_length="80" id="19">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Note" uuid="CF14944C392746379964320274958F71" type="10" never_null="true" id="20">
+			<field_extra visible="false"/>
+		</field>
+		<field name="Rate_Level" uuid="CEF2A75AACDC4900B4E939C94BA94E4C" type="3" never_null="true" id="21"/>
+		<primary_key field_name="Slip_ID" field_uuid="FB97AB787CFA4B739CEE185B7B2BC22B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="23">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="387" top="74" width="206" height="531.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Table_1)" uuid="8761E5045DFB401494DB55303BC60813" id="9">
+		<table_extra trashed="true">
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="952" top="78" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Attorney" uuid="A2248736756F4A7A824F1BA72F7B9BA3" id="10">
+		<field name="ID" uuid="B194EA1CE2CD4D31A8810482BBCA6C50" type="4" unique="true" id="1"/>
+		<field name="Attorney" uuid="BFC5D28B34F948A6BB545C698F321753" type="10" limiting_length="80" id="2">
+			<field_extra modifiable="false"/>
+		</field>
+		<field name="Rate1" uuid="A59CED40B37C4CBEBD195E53FEA8C708" type="6" id="3"/>
+		<field name="Rate2" uuid="C2874C7AA4054A31BE0600DD486E85C7" type="6" id="4"/>
+		<field name="Rate3" uuid="DA4D218D0FB545C2AC09C3BE1E9B631A" type="6" id="5"/>
+		<field name="Rate4" uuid="593361DC34B5400E9DA528D8D93FD468" type="6" id="6"/>
+		<field name="Rate5" uuid="B471C00B12FB4C2F904AA9533981B077" type="6" id="7"/>
+		<field name="Rate6" uuid="84DC2C2A037140058DE1F5682B4419EF" type="6" id="8"/>
+		<field name="Overhead" uuid="D5C2B3CBD8444F2EB1B117D500E8DC5B" type="6" id="9"/>
+		<field name="Initials" uuid="2E2997A3554C4F209E3A33F825E5D9EC" type="10" limiting_length="80" id="10"/>
+		<field name="Full Name" uuid="0F36B98212D3452AB7305E6D1BCCDDF0" type="10" limiting_length="80" id="11"/>
+		<primary_key field_name="ID" field_uuid="B194EA1CE2CD4D31A8810482BBCA6C50"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="18">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="508" top="732" width="206" height="432.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="25DE97C444724958B94997438B2BDAC1" name_Nto1="Client ID_1_" name_1toN="Client ID_1_" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="57C001269F844C1784140BA910BC672C" name="Client ID">
+				<table_ref uuid="3F178694C43044E3A9857B634C626FF9" name="_Invoice_Old"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="04036ADF9896453E9AE72A18F58A0A7C" name="Client ID">
+				<table_ref uuid="05E36BA52C9741ED8DC0F289B9D2A027" name="_Client_Old"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_create="true" choice_field="2"/>
+	</relation>
+	<relation uuid="C77B84CC7E0148C397C08E5CA541FEDA" name_Nto1="Invoice ID_2_" name_1toN="Invoice ID_2_" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="reject">
+		<related_field kind="source">
+			<field_ref uuid="58BC7D4EE36C482CAE964D91B30CD7E9" name="Invoice ID">
+				<table_ref uuid="DA7D8E8B016A431394F76E4CF462E878" name="_Line Items_Old"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B7F99556EE3045139C6F05098907C848" name="Invoice ID">
+				<table_ref uuid="3F178694C43044E3A9857B634C626FF9" name="_Invoice_Old"/>
+			</field_ref>
+		</related_field>
+		<relation_extra choice_field="1" entry_autofill="true"/>
+	</relation>
+	<relation uuid="A11AC7969BE542CB8234E569640E55EA" name_Nto1="Product ID_3_" name_1toN="Product ID_3_" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="reject">
+		<related_field kind="source">
+			<field_ref uuid="040018DB3A754FB0A0EBB8E4013D989D" name="Product ID">
+				<table_ref uuid="DA7D8E8B016A431394F76E4CF462E878" name="_Line Items_Old"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="A88661587C0449CBB05C9FFCE346A0F4" name="Product ID">
+				<table_ref uuid="FC494E8417BA4BE98E35C63EDE9D87E0" name="_Product_Old"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="true" choice_field="2"/>
+	</relation>
+	<relation uuid="082B2E5BB19B4241818947742AB9B90B" name_Nto1="Link_4" name_1toN="Link_4_return" auto_load_Nto1="true" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="5710701120FC48B09189B8FF105D46B8" name="Client">
+				<table_ref uuid="8261D8BE32914225B1E4D66EED8BA5EB" name="_Slip_TBD"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6CC2BFCD4B7C4B3B81A391DB9BDBA139" name="Nickname">
+				<table_ref uuid="157E0B68FD1F45C09A491B3F1B64C5AB" name="_Client_TBD"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="true" choice_field="2" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="572179446C2E48ED87468955B7159F85" name_Nto1="Link_6" name_1toN="Link_6_return" auto_load_Nto1="true" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="772910A7FB114D20891283BC8594A670" name="Client">
+				<table_ref uuid="EDDDEF4D4B714B49B56DCDD49AC85EE4" name="Slip"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BD57E222BD1C40299DBF5927978C6308" name="Nickname">
+				<table_ref uuid="4E62998C6EC2487699854DBA7254C48C" name="Client"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="true" choice_field="4" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="FB61A84DF81D4BADA5F83C7808A1AD7D" name_Nto1="Link_7" name_1toN="Link_7_return" auto_load_Nto1="true" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="86D526A3C8984A0281736A24D380FA88" name="Attorney">
+				<table_ref uuid="EDDDEF4D4B714B49B56DCDD49AC85EE4" name="Slip"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BFC5D28B34F948A6BB545C698F321753" name="Attorney">
+				<table_ref uuid="A2248736756F4A7A824F1BA72F7B9BA3" name="Attorney"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="true" choice_field="11" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B3C8264A1F1F43A781E1C182BE9E4F36" name_Nto1="Link_8" name_1toN="Link_8_return" auto_load_Nto1="true" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="2CDD8E83B7BA42EC9224F86CF9B51213" name="Atty-in-Charge">
+				<table_ref uuid="4E62998C6EC2487699854DBA7254C48C" name="Client"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BFC5D28B34F948A6BB545C698F321753" name="Attorney">
+				<table_ref uuid="A2248736756F4A7A824F1BA72F7B9BA3" name="Attorney"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="true" choice_field="11" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="02593195782C410090227789BEFE15F0" type="7">
+		<field_ref uuid="A88661587C0449CBB05C9FFCE346A0F4" name="Product ID">
+			<table_ref uuid="FC494E8417BA4BE98E35C63EDE9D87E0" name="_Product_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="243E60C2D4694025BC678938161E8119" type="1">
+		<field_ref uuid="FB97AB787CFA4B739CEE185B7B2BC22B" name="Slip_ID">
+			<table_ref uuid="EDDDEF4D4B714B49B56DCDD49AC85EE4" name="Slip"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="pk_index_10" uuid="29E72999E7C247F1A5D304ECE49F95CD" type="7">
+		<field_ref uuid="4DA7A696D2134D1EAC63E8830B2A65E9" name="PK_ID">
+			<table_ref uuid="8261D8BE32914225B1E4D66EED8BA5EB" name="_Slip_TBD"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="71498F0A76F34360A14FF7F389310F72" type="7">
+		<field_ref uuid="E6A360D5E7B84373A5BCEE19D1C5AF31" name="Slip_ID">
+			<table_ref uuid="4E62998C6EC2487699854DBA7254C48C" name="Client"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="79DB20C7F5274E6F9B2211DAF9A8FD5B" type="7">
+		<field_ref uuid="040018DB3A754FB0A0EBB8E4013D989D" name="Product ID">
+			<table_ref uuid="DA7D8E8B016A431394F76E4CF462E878" name="_Line Items_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="7A2966391EAD480382DF250166CD034E" type="7">
+		<field_ref uuid="BD57E222BD1C40299DBF5927978C6308" name="Nickname">
+			<table_ref uuid="4E62998C6EC2487699854DBA7254C48C" name="Client"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9AE0826AD6B9423E975C7DE63D4737E3" type="7">
+		<field_ref uuid="6CC2BFCD4B7C4B3B81A391DB9BDBA139" name="Nickname">
+			<table_ref uuid="157E0B68FD1F45C09A491B3F1B64C5AB" name="_Client_TBD"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="9F9C7910A3EB498AB83D40C026F88BAF" type="7">
+		<field_ref uuid="04036ADF9896453E9AE72A18F58A0A7C" name="Client ID">
+			<table_ref uuid="05E36BA52C9741ED8DC0F289B9D2A027" name="_Client_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A7A90E45AAF64CF8B0F22FAC6D11C702" type="7">
+		<field_ref uuid="B7F99556EE3045139C6F05098907C848" name="Invoice ID">
+			<table_ref uuid="3F178694C43044E3A9857B634C626FF9" name="_Invoice_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="BBE2E8FFCA7C46EC98042A25EF85BB88" type="1">
+		<field_ref uuid="B194EA1CE2CD4D31A8810482BBCA6C50" name="ID">
+			<table_ref uuid="A2248736756F4A7A824F1BA72F7B9BA3" name="Attorney"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="pk_index_3" uuid="C9057896095E435483FB3DC4A9DEF02F" type="7">
+		<field_ref uuid="98DBE6C220EB4054A771B5DF6BD96948" name="PK_ID">
+			<table_ref uuid="DA7D8E8B016A431394F76E4CF462E878" name="_Line Items_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D711733650B0417988E5527CBF632223" type="7">
+		<field_ref uuid="58BC7D4EE36C482CAE964D91B30CD7E9" name="Invoice ID">
+			<table_ref uuid="DA7D8E8B016A431394F76E4CF462E878" name="_Line Items_Old"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E3829BE360074ADF98C7CEA40C763490" type="7">
+		<field_ref uuid="BFC5D28B34F948A6BB545C698F321753" name="Attorney">
+			<table_ref uuid="A2248736756F4A7A824F1BA72F7B9BA3" name="Attorney"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="pk_index_5" uuid="E99C608A6E1D4C8DA8DFAC8719B54C87" type="7">
+		<field_ref uuid="5AED55BCEB8B4F07AC73F65C6DFB1A5A" name="PK_ID">
+			<table_ref uuid="157E0B68FD1F45C09A491B3F1B64C5AB" name="_Client_TBD"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EB24D6C6A1874E038CF17931B19C5F32" type="7">
+		<field_ref uuid="A41E57D4EC074247974689EC301CC085" name="ID">
+			<table_ref uuid="4E62998C6EC2487699854DBA7254C48C" name="Client"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FA4BCFFEC60B4560AD16EF3CE00578F4" type="7">
+		<field_ref uuid="57C001269F844C1784140BA910BC672C" name="Client ID">
+			<table_ref uuid="3F178694C43044E3A9857B634C626FF9" name="_Invoice_Old"/>
+		</field_ref>
+	</index>
+	<base_extra data_file_path=":TimeBase.4DD" package_name="TimeBase" structure_file_name="TimeBase" __stringCompHash="icu:56.1.0" __keywordBuildingHash="icu:56.1.0">
+		<temp_folder folder_selector="data"/>
+	</base_extra>
+</base>

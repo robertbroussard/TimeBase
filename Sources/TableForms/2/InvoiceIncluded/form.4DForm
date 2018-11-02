@@ -1,0 +1,389 @@
+﻿{
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"markerHeader": 25,
+	"markerBody": 47,
+	"markerBreak": 52,
+	"markerFooter": 52,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle14": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 622,
+					"height": 49,
+					"sizingX": "grow",
+					"fill": "transparent"
+				},
+				"Text": {
+					"type": "text",
+					"top": 7,
+					"left": 6,
+					"width": 70,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]1>"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 7,
+					"left": 84,
+					"width": 88,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]3>"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 7,
+					"left": 181,
+					"width": 89,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]4>"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 7,
+					"left": 280,
+					"width": 115,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]7>"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 7,
+					"left": 358,
+					"width": 106,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]8>"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 7,
+					"left": 476,
+					"width": 138,
+					"height": 16,
+					"sizingX": "grow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "<?[2]9>"
+				},
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 2,
+					"width": 618,
+					"height": 24,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"Invoice ID": {
+					"type": "input",
+					"top": 29,
+					"left": 6,
+					"width": 70,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Invoice ID:1",
+					"fill": "#FFFFFF",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Invoice Date": {
+					"type": "input",
+					"top": 29,
+					"left": 84,
+					"width": 88,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Invoice Date:3",
+					"fill": "#FFFFFF",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Subtotal": {
+					"type": "input",
+					"top": 29,
+					"left": 181,
+					"width": 89,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Subtotal:4",
+					"fill": "#FFFFFF",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Paid": {
+					"type": "input",
+					"top": 29,
+					"left": 303,
+					"width": 15,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Paid:7",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": " ",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Payment Date": {
+					"type": "input",
+					"top": 29,
+					"left": 358,
+					"width": 106,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Payment Date:8",
+					"fill": "#FFFFFF",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Payment Method": {
+					"type": "input",
+					"top": 29,
+					"left": 476,
+					"width": 138,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[_Invoice_Old:2]Payment Method:9",
+					"fill": "#FFFFFF",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line4": {
+					"type": "line",
+					"top": 2,
+					"left": 470,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter2": {
+					"type": "button",
+					"top": 0,
+					"left": 469,
+					"width": 3,
+					"height": 51,
+					"dataSource": "Splitter2",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 2,
+					"left": 350,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter3": {
+					"type": "button",
+					"top": 0,
+					"left": 349,
+					"width": 3,
+					"height": 51,
+					"dataSource": "Splitter3",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 2,
+					"left": 274,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter4": {
+					"type": "button",
+					"top": 0,
+					"left": 273,
+					"width": 3,
+					"height": 51,
+					"dataSource": "Splitter4",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line2": {
+					"type": "line",
+					"top": 2,
+					"left": 175,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter5": {
+					"type": "button",
+					"top": 0,
+					"left": 174,
+					"width": 3,
+					"height": 51,
+					"dataSource": "Splitter5",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 2,
+					"left": 78,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter1": {
+					"type": "button",
+					"top": 0,
+					"left": 77,
+					"width": 3,
+					"height": 51,
+					"dataSource": "Splitter1",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

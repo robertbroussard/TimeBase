@@ -1,0 +1,84 @@
+﻿{
+	"Bill Status": {
+		"lineHeight": 18,
+		"editable": true,
+		"customDataInteger": 0,
+		"items": [
+			{
+				"text": "Billable",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "No charge",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "Unbillable",
+				"ref": 3,
+				"editable": true
+			}
+		]
+	},
+	"Tax Rate": {
+		"customDataInteger": 0,
+		"items": [
+			{
+				"text": "19.6",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "2.1",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "5.5",
+				"ref": 1,
+				"editable": true
+			}
+		]
+	},
+	"Payment Methods": {
+		"customDataInteger": 0,
+		"items": [
+			{
+				"text": "Check",
+				"ref": 10,
+				"editable": true
+			},
+			{
+				"text": "Cash",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "Net",
+				"ref": 11,
+				"editable": true,
+				"subTree": {
+					"customDataInteger": 0,
+					"items": [
+						{
+							"text": "Net 30 days",
+							"ref": 12,
+							"editable": true
+						},
+						{
+							"text": "Net 60 days",
+							"ref": 14,
+							"editable": true
+						},
+						{
+							"text": "Net 90 days",
+							"ref": 15,
+							"editable": true
+						}
+					]
+				}
+			}
+		]
+	}
+}

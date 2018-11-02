@@ -1,0 +1,44 @@
+﻿{
+	"Methods": {
+		"methods": [
+			"M_Invoices",
+			"M_Clients",
+			"M_Products",
+			"CalculateInvoiceTotals",
+			"CalculateDiscount"
+		]
+	},
+	"Forms": {
+		"forms": [
+			"[_Product_Old]Input",
+			"[_Invoice_Old]Input",
+			"[_Line Items_Old]Output",
+			"[_Line Items_Old]Included",
+			"[_Invoice_Old]PrintInvoice",
+			"[_Line Items_Old]Input",
+			"[_Invoice_Old]InvoiceIncluded",
+			"[_Client_Old]Input",
+			"[_Line Items_Old]Print_Included"
+		]
+	},
+	"Tables": {
+		"tables": [
+			"_Client_Old",
+			"_Invoice_Old",
+			"_Line Items_Old",
+			"_Product_Old"
+		]
+	},
+	"Default Folder": {
+		"groups": [
+			"Methods",
+			"Forms",
+			"Tables"
+		]
+	},
+	"trash": {
+		"tables": [
+			"(Table_1)"
+		]
+	}
+}

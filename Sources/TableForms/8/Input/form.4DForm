@@ -1,0 +1,693 @@
+﻿{
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerBody": 644,
+	"markerBreak": 644,
+	"markerFooter": 654,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text22": {
+					"type": "text",
+					"top": 108,
+					"left": 24,
+					"width": 427,
+					"height": 16,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"styleSheet": "Default",
+					"text": "Slip"
+				},
+				"Slip_ID": {
+					"type": "input",
+					"top": 138,
+					"left": 123,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[Slip:8]Slip_ID:1",
+					"fill": "transparent",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 165,
+					"left": 123,
+					"width": 88,
+					"height": 17,
+					"dataSource": "[Slip:8]Date:2",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Attorney": {
+					"type": "input",
+					"top": 191,
+					"left": 123,
+					"width": 164,
+					"height": 17,
+					"dataSource": "[Slip:8]Attorney:4",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Attorney.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Client": {
+					"type": "input",
+					"top": 219,
+					"left": 123,
+					"width": 164,
+					"height": 16,
+					"dataSource": "[Slip:8]Client:6",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 246,
+					"left": 123,
+					"width": 424,
+					"height": 176,
+					"dataSource": "[Slip:8]Description:7",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Time_used": {
+					"type": "input",
+					"top": 435,
+					"left": 473,
+					"width": 74,
+					"height": 16,
+					"dataSource": "[Slip:8]Time_used:8",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Time_used.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRecNum": {
+					"type": "input",
+					"top": 112,
+					"left": 534,
+					"width": 100,
+					"height": 15,
+					"dataSource": "vRecNum",
+					"fill": "transparent",
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"tooltip": "Record Number",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vRecNum.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"Popup Drop down List1": {
+					"type": "dropdown",
+					"top": 432,
+					"left": 123,
+					"width": 76,
+					"height": 22,
+					"dataSource": "puRateLevel",
+					"dataSourceTypeHint": "arrayNumber",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"method": "ObjectMethods/Popup Drop down List1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Rate": {
+					"type": "input",
+					"top": 435,
+					"left": 261,
+					"width": 72,
+					"height": 17,
+					"dataSource": "[Slip:8]Rate:9",
+					"fill": "transparent",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Bill_Status": {
+					"type": "input",
+					"top": 464,
+					"left": 123,
+					"width": 210,
+					"height": 16,
+					"dataSource": "[Slip:8]Bill_Status:13",
+					"fill": "#FFFFFF",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/Bill Status"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Billable_Amt": {
+					"type": "input",
+					"top": 464,
+					"left": 473,
+					"width": 74,
+					"height": 16,
+					"dataSource": "[Slip:8]Billable_Amt:10",
+					"fill": "transparent",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"textFormat": "$###,##0.00;-$###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line23": {
+					"type": "line",
+					"top": 92,
+					"left": 19,
+					"width": 761,
+					"sizingX": "grow"
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 16,
+					"left": 21,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bFirst",
+					"tooltip": "First Record",
+					"action": "firstRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "First",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 16,
+					"left": 84,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bPrevious",
+					"tooltip": "Previous Record",
+					"action": "previousRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Previous",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 16,
+					"left": 147,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bNext",
+					"tooltip": "Next Record",
+					"action": "nextRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Next",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 16,
+					"left": 210,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bLast",
+					"tooltip": "Last Record",
+					"action": "lastRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Last",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 16,
+					"left": 408,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bDelete",
+					"tooltip": "Delete Record",
+					"action": "deleteRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Delete",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 16,
+					"left": 471,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bCancel",
+					"tooltip": "Cancel",
+					"action": "cancel",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Cancel",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 16,
+					"left": 534,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bValidate",
+					"tooltip": "OK",
+					"action": "accept",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"text": "Validate",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 138,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Slip ID : "
+				},
+				"Text25": {
+					"type": "text",
+					"top": 165,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Date : "
+				},
+				"Text27": {
+					"type": "text",
+					"top": 191,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Attorney : "
+				},
+				"Text29": {
+					"type": "text",
+					"top": 219,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Client : "
+				},
+				"Text30": {
+					"type": "text",
+					"top": 246,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Description : "
+				},
+				"Text31": {
+					"type": "text",
+					"top": 435,
+					"left": 371,
+					"width": 97,
+					"height": 15,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Time : "
+				},
+				"Text32": {
+					"type": "text",
+					"top": 435,
+					"left": 219,
+					"width": 37,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Rate : "
+				},
+				"Text33": {
+					"type": "text",
+					"top": 464,
+					"left": 371,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Billable Amt : "
+				},
+				"Text36": {
+					"type": "text",
+					"top": 465,
+					"left": 21,
+					"width": 97,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Bill Status : "
+				},
+				"Text1": {
+					"type": "text",
+					"top": 434,
+					"left": 41,
+					"width": 77,
+					"height": 16,
+					"textAlign": "right",
+					"styleSheet": "Default",
+					"text": "Rate Level : "
+				},
+				"Field": {
+					"type": "input",
+					"top": 403,
+					"left": 22,
+					"width": 86,
+					"height": 15,
+					"visibility": "hidden",
+					"dataSource": "[Slip:8]Rate_Level:21",
+					"fill": "transparent",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 333,
+					"left": 18,
+					"width": 78,
+					"height": 22,
+					"visibility": "hidden",
+					"dataSource": "bcalc",
+					"text": "Calc",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Attorney1": {
+					"type": "input",
+					"top": 191,
+					"left": 301,
+					"width": 244,
+					"height": 17,
+					"dataSource": "[Attorney:10]Full Name:11",
+					"fill": "transparent",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Attorney1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Attorney2": {
+					"type": "input",
+					"top": 219,
+					"left": 301,
+					"width": 244,
+					"height": 17,
+					"dataSource": "[Client:7]Full_Name:4",
+					"fill": "transparent",
+					"textAlign": "left",
+					"styleSheet": "Default",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Attorney2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Popup Drop down List": {
+					"type": "dropdown",
+					"top": 162,
+					"left": 316,
+					"width": 198,
+					"height": 22,
+					"visibility": "hidden",
+					"dataSource": "pclient",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"method": "ObjectMethods/Popup Drop down List.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Combo Box": {
+					"type": "combo",
+					"top": 134,
+					"left": 321,
+					"width": 198,
+					"height": 24,
+					"visibility": "hidden",
+					"dataSource": "pComboClient",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"method": "ObjectMethods/Combo Box.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				}
+			}
+		}
+	]
+}

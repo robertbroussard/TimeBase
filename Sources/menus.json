@@ -1,0 +1,123 @@
+﻿{
+	"bars": [
+		{
+			"id": 1,
+			"title": "Menu Bar #1",
+			"items": [
+				{
+					"link": 18268
+				},
+				{
+					"link": 14243
+				},
+				{
+					"link": 3062
+				}
+			]
+		}
+	],
+	"menus": [
+		{
+			"link": 18268,
+			"title": ":xliff:CommonMenuFile",
+			"items": [
+				{
+					"title": "Clients",
+					"method": "M_Clients",
+					"shortcutAccel": true,
+					"shortcutKey": "1",
+					"startNewProcess": true
+				},
+				{
+					"title": "Slips",
+					"method": "M_Slips",
+					"shortcutAccel": true,
+					"shortcutKey": "2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Attorneys",
+					"method": "M_Attorney",
+					"shortcutAccel": true,
+					"shortcutKey": "3",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":xliff:CommonMenuItemQuit",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 14243,
+			"title": ":xliff:CommonMenuEdit",
+			"items": [
+				{
+					"title": ":xliff:CommonMenuItemUndo",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":xliff:CommonMenuItemCut",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":xliff:CommonMenuItemCopy",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":xliff:CommonMenuItemPaste",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":xliff:CommonMenuItemClear",
+					"action": "clear"
+				},
+				{
+					"title": ":xliff:CommonMenuItemSelectAll",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":xliff:CommonMenuItemShowClipboard",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 3062,
+			"title": ":xliff:CommonMenuMode",
+			"items": [
+				{
+					"title": ":xliff:CommonMenuItemDesign",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				}
+			]
+		}
+	]
+}

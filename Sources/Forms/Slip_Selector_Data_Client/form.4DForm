@@ -1,0 +1,165 @@
+﻿{
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"top": 32,
+					"left": 52,
+					"width": 63,
+					"height": 15,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"text": "Start Date:"
+				},
+				"vStartDate": {
+					"type": "input",
+					"top": 32,
+					"left": 124,
+					"width": 121,
+					"height": 15,
+					"dataSource": "vStartDate",
+					"dataSourceTypeHint": "date",
+					"fill": "transparent",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vEndDate": {
+					"type": "input",
+					"top": 58,
+					"left": 124,
+					"width": 121,
+					"height": 15,
+					"dataSource": "vEndDate",
+					"dataSourceTypeHint": "date",
+					"fill": "transparent",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"cb_Client": {
+					"type": "combo",
+					"top": 28,
+					"left": 278,
+					"width": 213,
+					"height": 24,
+					"dataSource": "cb_Client",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"method": "ObjectMethods/cb_Client.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 93,
+					"left": 52,
+					"width": 104,
+					"height": 31,
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"bQuery": {
+					"type": "button",
+					"top": 93,
+					"left": 170,
+					"width": 104,
+					"height": 31,
+					"dataSource": "bQuery",
+					"action": "accept",
+					"text": "Query",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 58,
+					"left": 52,
+					"width": 63,
+					"height": 15,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"text": "End Date:"
+				}
+			}
+		}
+	]
+}
