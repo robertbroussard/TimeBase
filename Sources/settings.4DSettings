@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<preferences stamp="9">
+<preferences stamp="10">
 	<com.4d>
 		<database>
-			<misc period_and_commas_in_numerics="true" store_unicode_tokens="false" accept_dot_syntax="false" allow_json_dates="false"/>
+			<misc accept_dot_syntax="false" allow_json_dates="false" period_and_commas_in_numerics="true" store_unicode_tokens="false"/>
 			<cache size_maximum="1024"/>
 		</database>
 		<general startup_environnement="1">
@@ -17,7 +17,7 @@
 				<cancel_input_form alt="true" key_code="27"/>
 				<accept_input_form alt="true" key_code="3"/>
 			</shortcuts>
-			<user default_user="0" print_progress="false" splash_screen="false" formula_editor_with_full_lists="true"/>
+			<user default_user="0" formula_editor_with_full_lists="true" print_progress="false" splash_screen="false"/>
 			<developper design_acces="0"/>
 		</interface>
 		<sql>
@@ -45,9 +45,9 @@
 					<web_passwords generic_web_user="1"/>
 					<filters allow_4dsync_urls="true"/>
 				</options>
-				<configuration ip_address="0" listening_address="::" automatic_session_management="false">
+				<configuration automatic_session_management="false" ip_address="0" listening_address="::">
 					<hosts>
-						<host id="0" name="Default" html_root="./DossierWeb/" home_page="index.html"/>
+						<host home_page="index.html" html_root="./DossierWeb/" id="0" name="Default"/>
 					</hosts>
 				</configuration>
 				<log tokens="">
@@ -56,7 +56,7 @@
 				<webservices allow_requests="false">
 					<server allow_requests="false"/>
 				</webservices>
-				<misc remove_slash="true" automatic_variables_management="true"/>
+				<misc automatic_variables_management="true" remove_slash="true"/>
 			</standalone_server>
 			<remote>
 				<options>
@@ -65,9 +65,9 @@
 					<web_passwords generic_web_user="1"/>
 					<filters allow_4dsync_urls="true"/>
 				</options>
-				<configuration allow_ssl="false" ip_address="0" listening_address="0.0.0.0" automatic_session_management="false"/>
+				<configuration allow_ssl="false" automatic_session_management="false" ip_address="0" listening_address="0.0.0.0"/>
 				<webservices allow_requests="false"/>
-				<misc remove_slash="true" automatic_variables_management="true"/>
+				<misc automatic_variables_management="true" remove_slash="true"/>
 			</remote>
 		</web>
 		<deployment>

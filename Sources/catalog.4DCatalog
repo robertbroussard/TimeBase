@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
-<base name="TimeBase" uuid="3DCEF6FF8C004350BAD4A00231475032" collation_locale="fr">
+<base name="TimeBase" uuid="3DCEF6FF8C004350BAD4A00231475032" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="_Client_Old" uuid="05E36BA52C9741ED8DC0F289B9D2A027" id="1" leave_tag_on_delete="true">
 		<field name="Client ID" uuid="04036ADF9896453E9AE72A18F58A0A7C" type="10" limiting_length="10" unique="true" never_null="true" id="1">

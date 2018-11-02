@@ -43,6 +43,18 @@
 					"startNewProcess": true
 				},
 				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Database Settings...",
+					"method": "Util_Database_Settings"
+				},
+				{
+					"title": "Backup Now...",
+					"method": "Util_Backup_Now"
+				},
+				{
 					"title": "(-",
 					"isSeparator": true,
 					"enabled": false
